@@ -40,13 +40,31 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express is simply a Node.js module - just like any other module. Express
+
+One of the major features of express is routing. Routing creates endpoints for specific data that you want to use at a particular endpoint, which helps organize your code better and cleans up your application.
+
+Express also allows the developer to use middleware for extended features. Express has middleware already developed in the framework, like express.json, but it also allows the possibility of custom middleware that isn’t provided by express.
+
 - [ ] Describe Middleware?
+
+Middleware is a type of function that is responsible for authenticating routes. Once the function authenticates, it will push the request to its final destination.
+
+There is third party middleware (npm modules) to install and import with require(). SOme popular ones are helmet, cors, morgan. There is also custom middleware - these are functions we writer to accomplish the said tasks above. Custom middleware is a 2 step process. We write a function that receives arguments and then add it to the middleware que.
 
 - [ ] Describe a Resource?
 
+Everything is a resource. These are available with unique URIs. THey can have numerous representations. Managing resources happens wit HTTP methods.
+
+Resources can be: A database, the web, applications. Anything can be used as a resource.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Status code 200 with a json message of successful request.
+
 - [ ] How can we partition our application into sub-applications?
+
+Create different directories for Routes and middleware that will only apply to that particular route. Then create a directory for functions that can be used throughout the application.
 
 ## Minimum Viable Product
 
