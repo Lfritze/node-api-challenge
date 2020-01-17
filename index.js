@@ -23,7 +23,9 @@ server.get("/", (req, res) => {
   res.status(200).json({ message: "welcome" });
 });
 
-const port = process.env.PORT || 5000;
+// I typically put this in index.js and import server .. trying something different
+
+const port = process.env.PORT || 4000;
 
 server.listen(port, () => {
   console.log(`\n Server Running On http://localhost:${port}`);
