@@ -19,7 +19,7 @@ function logger(req, res, next) {
 }
 
 // ROOT
-server.get("/", (req, res) => {
+server.get("/", logger, (req, res) => {
   res.status(200).json({ message: "welcome" });
 });
 
