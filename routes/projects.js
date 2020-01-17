@@ -45,7 +45,7 @@ router.put("/:id", validateId, validateBody, (req, res) => {
   Projects.update(req.params.id, req.body)
     .then(result => {
       if (result) {
-        res.status(200).json(result);
+        res.status(200).json({ message: "Item Updated" });
       }
     })
     .catch(err => {
