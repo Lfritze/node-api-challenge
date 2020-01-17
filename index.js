@@ -31,8 +31,8 @@ server.listen(port, () => {
   console.log(`\n Server Running On http://localhost:${port}`);
 });
 
-server.use("/api/projects", projectsRoutes);
-server.use("/api/actions", actionsRoutes);
+server.use("/api/projects", logger, projectsRoutes);
+server.use("/api/actions", logger, actionsRoutes);
 
 server.get("*", (req, res) => {
   res.status(200).json({ message: "ok" });
